@@ -6,7 +6,7 @@
 
 When deploying web services in production, restarting all instances at once causes complete downtime and drops active user traffic.
 
-The objective of Jira ticket DEV-691 was to design and validate an automated zero-downtime deployment pipeline using HashiCorp Nomad and HashiCorp Consul.
+The objective was to design and validate an automated zero-downtime deployment pipeline using HashiCorp Nomad and HashiCorp Consul.
 
 ### Core Requirements:
 1. Deploy a sample web service across multiple instances with dynamic port assignment.
@@ -21,7 +21,7 @@ The objective of Jira ticket DEV-691 was to design and validate an automated zer
 
 ## 2. Solution & Technical Architecture
 
-We created a proof-of-concept cluster utilizing:
+created a proof-of-concept cluster utilizing:
 * Nomad (v2.0.7): Workload orchestrator managing allocations and update pacing.
 * Consul (v2.0.4): Service catalog that discovers dynamic container ports and performs continuous health checks.
 * Docker Engine on WSL 2 (Ubuntu): Container virtualization runtime.
@@ -88,7 +88,7 @@ nomad-rolling-update/
 ## 4. Shared Application & Script Implementation
 
 ### A. Application Server (`app.py`)
-Why: We wrote a lightweight HTTP server with zero external dependencies to return the version string, host ID, and a dedicated `/health` check with an optional warmup delay.
+Why: wrote a lightweight HTTP server with zero external dependencies to return the version string, host ID, and a dedicated `/health` check with an optional warmup delay.
 
 ```python
 import os
