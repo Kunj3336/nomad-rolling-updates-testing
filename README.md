@@ -1,8 +1,8 @@
-# DEV-691: HashiCorp Nomad Rolling Updates & Zero-Downtime Deployment POC
+# Rolling Updates Testing with Nomad & Consul
 
 ---
 
-## 1. Problem Statement (The Task)
+## 1. Problem Statement
 
 When deploying web services in production, restarting all instances at once causes complete downtime and drops active user traffic.
 
